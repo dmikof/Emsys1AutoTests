@@ -22,8 +22,10 @@ namespace EmsysTests
             Assert.IsTrue(DashboardPage.IsAt, "Failed to login.");
 
             //DashboardPage.GoTo();
-            DashboardPage.OpenWebCatalogue();
-            DashboardPage.ClickAddWeatherForecast();
+            DashboardPage dashboardPage = new DashboardPage();
+
+            dashboardPage.OpenWebCatalogue();
+            dashboardPage.ClickAddWeatherForecast();
             Assert.IsTrue(DashboardPage.WidgetIsAdded, "Failed to add WeatherForecastWidget");
             //DashboardPage.RemoveWeatherForecastWidget();
             //Assert.IsTrue(DashboardPage.WidgetIsRemoved, "Failed to remove WeatherForecastWidget");

@@ -31,13 +31,13 @@ namespace EmsysTests
             throw new NotImplementedException();
         } */
 
-        public static void OpenWebCatalogue()
+        public  void OpenWebCatalogue()
         {
             var CustomizeDashboardLink = Driver.Instance.FindElement(By.Id("showWebPartCatalogLink"));
             CustomizeDashboardLink.Click();
         }
 
-        public static void ClickAddWeatherForecast()
+        public void ClickAddWeatherForecast()
         {
             var AddWeatherForecastButton = Driver.Instance.FindElement(By.XPath(".//*[@id='WebPartCatalog']/form/div/table/tbody/tr[5]/td[1]/button"));
             AddWeatherForecastButton.Click();
