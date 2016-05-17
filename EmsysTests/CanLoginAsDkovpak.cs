@@ -17,8 +17,8 @@ namespace EmsysTests
         public void LoginAsDkovpak()
         {   LoginPage loginPage = new LoginPage();
             loginPage.GoTo();
-            loginPage.LoginAs("admin").WithPassword("password").Login();
-          //  Assert.IsTrue(DashboardPage.IsAt, "Failed to login.");
+            loginPage.LoginAs("dkovpak").WithPassword("dkovpak1").Login();
+            Assert.IsTrue(DashboardPage.IsAt, "Failed to login.");
         }
     }
 } 
