@@ -20,5 +20,10 @@ namespace EmsysTests
             loginPage.LoginAs("dkovpak").WithPassword("dkovpak1").Login();
             Assert.IsTrue(DashboardPage.IsAt, "Failed to login.");
         }
+
+        [TestCleanup]
+        public void Cleanup() {
+            Driver.Close();
+        }
     }
 } 
